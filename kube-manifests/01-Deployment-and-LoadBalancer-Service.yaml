@@ -1,0 +1,30 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bcipipline1image1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bcipipline1image1
+  template:
+    metadata:
+      labels:
+        app: bcipipline1image1
+    spec:
+      containers:
+        - name: bcipipline1image1
+          image: aug24registry.azurecr.io/bcipipline1image1
+          ports:
+          - containerPort: 80
+- - -
+apiVersion: v1
+kind: Service
+metadata:
+    name: bcipipline1image1
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80 
+    selector:
+        app: bcipipline1image1
