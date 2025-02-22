@@ -16,7 +16,7 @@ spec:
         - name: bcipipline1image1
           image: feb20reg.azurecr.io/manual-feb21-satrter-image1
           ports:
-          - containerPort: 80
+            - containerPort: 80
 - - -
 apiVersion: v1
 kind: Service
