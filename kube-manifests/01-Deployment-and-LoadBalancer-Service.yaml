@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aug24registry
+  name: dep1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aug24registry
+      app: dep1
   template:
     metadata:
       labels:
-        app: aug24registry
+        app: dep1
     spec:
       containers:
-        - name: aug24registry
+        - name: dep1
           image: feb20reg.azurecr.io/manual-feb21-satrter-image1
           ports:
             - containerPort: 80
@@ -21,11 +21,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: aug24registry
+  name: dep1
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 80
   selector:
-    app: aug24registry
+    app: dep1
