@@ -30,8 +30,8 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'feb21-manual-starter-serviceconn'
-        repository: 'manual-feb21-satrter-image1'
+        containerRegistry: 'march10-serviceconn'
+        repository: 'march10repo'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
