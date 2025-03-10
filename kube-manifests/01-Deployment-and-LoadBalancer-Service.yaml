@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: dep1
-          image: feb20reg.azurecr.io/manual-feb21-satrter-image1
+          image: march30acr.azurecr.io/march10repo
           ports:
             - containerPort: 80
 ---
